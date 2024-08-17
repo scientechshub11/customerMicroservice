@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-let port = 6000;
+require('dotenv').config();
+let port = process.env.port || 6000;
 app.listen(port,()=>{
     console.log(`product service listen to the port ${port}`)
 })
